@@ -1,4 +1,4 @@
-package com.ifi.trainer_ui.pokemonTypes.bo;
+package com.ifi.pokemon_ui.pokemonTypes.bo;
 
 public class Sprites {
     public String getBack_default() {

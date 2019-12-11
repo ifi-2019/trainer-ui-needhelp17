@@ -1,4 +1,4 @@
-package com.ifi.trainer_ui.pokemonTypes.service;
+package com.ifi.pokemon_ui.pokemonTypes.service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

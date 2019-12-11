@@ -1,6 +1,6 @@
-package com.ifi.trainer_ui.pokemonTypes.service;
+package com.ifi.pokemon_ui.pokemonTypes.service;
 
-import com.ifi.trainer_ui.pokemonTypes.bo.PokemonType;
+import com.ifi.pokemon_ui.pokemonTypes.bo.PokemonType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -25,10 +25,16 @@ public class PokemonTypeServiceImpl implements PokemonTypeService {
         return list;
     }
 
+    public PokemonType getpokemonType(int id) {
+        var resultat = restTemplate.getForObject(serviceUrl+"/pokemon-types/"+id,PokemonType.class);
+        return resultat;
+    }
+
     @Autowired
     public void setRestTemplate(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
+
     @Value("${pokemonType.service.url}")
     public void setPokemonTypeServiceUrl(String pokemonServiceUrl) {
         this.serviceUrl = pokemonServiceUrl;

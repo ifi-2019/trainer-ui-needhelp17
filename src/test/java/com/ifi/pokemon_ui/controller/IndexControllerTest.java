@@ -1,4 +1,4 @@
-package com.ifi.trainer_ui.controller;
+package com.ifi.pokemon_ui.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.stereotype.Controller;

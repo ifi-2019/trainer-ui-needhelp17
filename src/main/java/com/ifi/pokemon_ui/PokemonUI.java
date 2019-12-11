@@ -1,4 +1,4 @@
-package com.ifi.trainer_ui;
+package com.ifi.pokemon_ui;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

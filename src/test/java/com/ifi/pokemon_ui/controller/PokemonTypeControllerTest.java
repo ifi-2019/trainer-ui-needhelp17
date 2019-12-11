@@ -1,7 +1,7 @@
-package com.ifi.trainer_ui.controller;
+package com.ifi.pokemon_ui.controller;
 
-import com.ifi.trainer_ui.pokemonTypes.bo.PokemonType;
-import com.ifi.trainer_ui.pokemonTypes.service.PokemonTypeService;
+import com.ifi.pokemon_ui.pokemonTypes.bo.PokemonType;
+import com.ifi.pokemon_ui.pokemonTypes.service.PokemonTypeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
