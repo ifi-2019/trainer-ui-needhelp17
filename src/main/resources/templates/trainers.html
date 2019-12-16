@@ -14,7 +14,16 @@
                 </div>
                 <div class = "my-1">Team :</div>
                 <div class="card-body">
-
+                    {{#team}}
+                        <div class="card shadow-sm mb-3">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">{{name}}
+                                    <span class="badge badge-secondary">Id {{pokemonType}}</span>
+                                </h4>
+                            </div>
+                            <img class="card-img-top" src="{{urlImg}}" alt="Pokemon front"/>
+                        </div>
+                    {{/team}}
                 </div>
             </div>
         </div>

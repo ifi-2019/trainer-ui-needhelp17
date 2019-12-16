@@ -8,4 +8,37 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="pokedex">
+                    <img src="/images/pokedex.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                    Pokedex
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="trainers">
+                    <img src="/images/trainer.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                    Trainers
+                </a>
+            </li>
+        </ul>
+
+        {{#user}}
+        <span class="navbar-text mr-md-3">Welcome {{username}}</span>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="profile">
+                    <img src="/images/trainer.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                    My Profile
+                </a>
+            </li>
+        </ul>
+        <form class="form-inline" action="/logout" method="post">
+            <input type="submit" class="btn btn-outline-warning my-2 my-sm-0" value="Sign Out"/>
+            <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}"/>
+        </form>
+        {{/user}}
+    </nav>
 </head>
