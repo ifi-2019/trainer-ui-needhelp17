@@ -13,8 +13,11 @@ public class SecurityControllerAdvice {
 
     @ModelAttribute("user")
     public Object principal(){
-        UserDetails ud = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return  ud;
+        if (SecurityContextHolder.getContext().getAuthentication().getPrincipal()!= null) {
+            UserDetails ud = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            return ud;
+        }
+        else return null;
     }
 
 }
