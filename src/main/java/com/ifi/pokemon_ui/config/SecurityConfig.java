@@ -43,11 +43,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
        return new UserDetailsService(trainersService);
     }
 
-    @Override
+    /*@Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().antMatchers("/registerTrainer","/").permitAll();
         super.configure(http);
-    }
+    }*/
 
     public class UserDetailsService implements org.springframework.security.core.userdetails.UserDetailsService {
 
